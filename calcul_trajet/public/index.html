@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Paths</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+</head>
+<body>
+    <!-- LEFT -->
+    <div class="left_div" id="leftDiv">
+        <div class="left_div_title">Restaurants</div>
+        <div class="left_div_restaurants" id="divListRestaurants"></div>
+    </div>
+
+    <!-- CENTER -->
+    <div class="center_div">
+        <div class="center_div_options">
+            <div class="center_div_options_divbuttons">
+                <input type="button" value="Ma position" id="changeMyPosition" class="button_my_position">
+                <input type="button" value="Point d'arrivée" id="changeEndPosition" class="button_end_point">
+            </div>
+            <div class="center_div_options_divinfos" id="buttonInfos">
+                Cliquez sur un bouton pour voir les informations liées apparaître
+            </div>
+        </div>
+        <div class="center_div_map" id="map"></div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="right_div">
+        <div class="right_div_chat">
+            <div class="right_div_chat_title">Chat</div>
+            <div class="right_div_chat_container">
+                <div class="right_div_chat_div_textarea" id="messageList">
+                    <div class="message_bubble message_bot">
+                        <div><i><b>Bot</b></i></div>
+                        <div>
+                            Commencez une discussion ici !
+                        </div>
+                    </div>
+                </div>
+                <div class="right_div_chat_container_inputs">
+                    <input type="text" id="message" placeholder="message" class="right_div_chat_inputtext" />
+                    <input type="button" id="sendMessage" value="✔" class="right_div_chat_inputbutton" />
+                </div>
+            </div>
+
+        </div>
+        <div class="right_div_room">
+            <div class="right_div_room_title">Room</div>
+            <div class="right_div_room_users">
+                <div class="user_container">
+                    <div class="set_user">Utilisateur 1</div>
+                    <span class="distance_time"></span>
+                </div>
+                <div class="user_container">
+                    <div class="set_user">Utilisateur 2</div>
+                    <span class="distance_time"></span>
+                </div>
+                <div class="user_container">
+                    <div class="set_user">Utilisateur 3</div>
+                    <span class="distance_time"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src='/socket.io/socket.io.js'></script>
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+crossorigin=""></script>
+<script> var socket = io(); </script>
+<script src="script_socket.js"></script>
+
+</html>

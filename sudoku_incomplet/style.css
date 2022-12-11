@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(31, 31, 31);
+    font-family: "Gill Sans", sans-serif;
+}
+
+table{
+    border: solid white 1px;
+}
+
+td{
+    width: 40px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    border: solid white 1px;
+}
+
+.cell_background_0{
+    background: rgb(71, 0, 15);
+}
+
+.cell_background_not_0{
+    background: rgb(59, 36, 81);
+}
+
+.cell_checked{
+    background: #595100;
+}

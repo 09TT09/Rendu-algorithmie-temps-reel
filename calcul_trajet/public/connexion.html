@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users Paths</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="max_screen">
+        <div class="connexion_div">
+            <div class="connexion_div_title">Connexion</div>
+            <div class="connexion_div_infos">
+                <label for="pseudo">Pseudo (dans server.js -> authorizedUser)</label>
+                <input type="text" id="pseudo" name="Pseudo" placeholder="Pseudo" />
+                <label for="Password">Mot de passe (= pass)</label>
+                <input type="password" id="password" name="Password" placeholder="Mot de passe" />
+                <input type="button" value="Envoyer" class="button" onclick="submit()">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src='/socket.io/socket.io.js'></script>
+<script> var socket = io(); </script>
+<script src="connexion_script.js"></script>
+
+</html>
